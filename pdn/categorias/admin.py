@@ -1,11 +1,11 @@
 from django.contrib import admin
-from .models import Tag
+from .models import Categoria
 
-# Register your models here.
-class TagAdmin(admin.ModelAdmin):
-    model = Tag
+
+class CategoriaAdmin(admin.ModelAdmin):
+    model = Categoria
     fields = ('nome','slug')
     readonly_fields = ('slug',)
 
 
-admin.site.register(Tag, TagAdmin)
+admin.site.register(Categoria, CategoriaAdmin)
