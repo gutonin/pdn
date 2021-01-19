@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^summernote/', include('django_summernote.urls')),
     url(r'grappelli/', include('grappelli.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^canal/', include('artigos.urls')),
 ]
 
 if settings.DEBUG:

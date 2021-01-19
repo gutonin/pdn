@@ -63,8 +63,8 @@ ROOT_URLCONF = 'pdn.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
         'APP_DIRS': True,
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -132,7 +132,7 @@ STATICFILES_DIRS = [
      os.path.join(BASE_DIR, "static"),
 ]
 
-FILEBROWSER_DIRECTORY = ''
+FILEBROWSER_DIRECTORY = 'uploads/'
 
 DIRECTORY = ''
 

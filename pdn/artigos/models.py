@@ -4,6 +4,7 @@ from django.utils import timezone
 from categorias.models import Categoria
 from tags.models import Tag
 from redatores.models import Redator
+from tags.utils import slug_generator
 
 
 class Artigo(models.Model):
@@ -20,5 +21,9 @@ class Artigo(models.Model):
 
     def __str__(self):
         return self.titulo
+
+    def save(self, *args, **kwargs):
+        self.slug = slug_generator(self.titulo)
+        super(Artigo, self).save(*args, **kwargs)
 
 

@@ -11,4 +11,4 @@ class Tag(models.Model):
     
     def save(self, *args, **kwargs):
         self.slug = slug_generator(self.nome)
-        super(Tag,self).save(*args, **kwargs)
+        super(Tag, self).save(*args, **kwargs)
