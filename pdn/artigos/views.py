@@ -4,7 +4,7 @@ from .models import Artigo
 # Create your views here.
 def home(request):
     template = 'index.html'
-    principal = Artigo.objects.order_by('-data_publicacao')
+    principal = Artigo.objects.order_by('-data_publicacao').only()
     context = {'principal': principal}
     return render(request, template, context)
 

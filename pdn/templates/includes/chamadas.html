@@ -1,4 +1,17 @@
-<a href='/canal/{{ principal.categoria.slug }}/{{ principal.slug }}'>
-    <img class="img-fluid" src="/media/{{ principal.imagem }}">
-    <h1>{{ principal.titulo }}</h1>
-</a>    
+{% load static %}
+<a href='/canal/{{ i.categoria.slug }}/{{ i.slug }}'>
+    
+    {% if i.imagem %}
+    
+        <img class="img-fluid" src="/media/{{ i.imagem }}">
+    
+    {% else %}
+    
+        <img class="img-fluid" src="/media/uploads/download.png">   
+    
+    {% endif %}
+    
+    <h2>{{ i.titulo }}</h2>
+    <h6>{{ i.chapeu }}</h6>
+</a>
+ 

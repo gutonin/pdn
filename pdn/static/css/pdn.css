@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(39, 52, 73);
+}
+.principal {
+    background-color: rgb(216, 216, 216);
+}
+a{ 
+    text-decoration:none;
+    color: black;
+} 
+img{
+    border-radius: 10px;
+    min-width: 80%;
+    min-height: 80%;
+    max-width:  80%;
+    max-height: 80%;
+}
+hr{ 
+    color: rgb(109, 109, 109);
+  }
+.titulo-pg{
+    color: rgb(0, 0, 0);
+    height: 40px;
+    font-size:40px;
+}
+.hr-personalizado{
+    background: rgb(39, 52, 73);
+    height: 7px;
+    border-radius: 5px;
+}
