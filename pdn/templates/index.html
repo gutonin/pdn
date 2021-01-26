@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
   
 {% block header %}
-  <nav class="navbar navbar-expand-lg bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="/canal">PDN</a>
       <button
@@ -20,9 +20,6 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/canal">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Categorias</a>
-          </li>
         </ul>
       </div>
     </div>
@@ -38,8 +35,11 @@
       </div>
       <br>
       <div class="row">
+          {% include 'includes/nav.html' %}
         <div class="hr-personalizado"></div>
-        <br>
+      </div>
+      <br>
+      <div class="row">
         <div class="col-9">
           {% include 'includes/chamadas.html' with i=principal.first teste=True %} 
         </div>
@@ -57,7 +57,7 @@
         <div class="col-md-12">
           <div class="hr-personalizado"></div> 
           <br>
-          {% include 'includes/chamadas_outras.html' with principal=principal|slice:'3:9' %}          
+          {% include 'includes/chamadas_outras.html' with principal=principal|slice:'3:' %}          
         </div>
       </div>
     </div>
@@ -74,7 +74,7 @@
       <div class="row">
         <!--Grid column-->
         <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Footer Content</h5>
+          <h5 class="text-uppercase">Footer</h5>
   
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis

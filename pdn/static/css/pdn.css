@@ -1,19 +1,20 @@
 body{
-    background-color: rgb(39, 52, 73);
+    background-color: rgb(39, 46, 66);
 }
 .principal {
     background-color: rgb(216, 216, 216);
 }
+
 a{ 
-    text-decoration:none;
+    text-decoration: none;
     color: black;
 } 
 img{
     border-radius: 10px;
-    min-width: 80%;
-    min-height: 80%;
-    max-width:  80%;
-    max-height: 80%;
+    min-width: 75%;
+    min-height: 75%;
+    max-width:  75%;
+    max-height: 75%;
 }
 hr{ 
     color: rgb(109, 109, 109);

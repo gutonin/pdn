@@ -26,31 +26,19 @@
   </nav>
   <br/>
 {% endblock header %}
+
 {% block content %}
-  <main class="principal">
-    <div class="container">
-      <div class="row text-center">
-        <div class="titulo-pg">PDN</div>
-      </div>
-      <br>
-      <div class="row">
-        <h6>{{ artigo.chapeu }}</h6>
-        <h1>{{ artigo.titulo }}</h1>
-      </div>
-      <div class="row">
-        <img class="img-fluid text-center" src="/media/{{ artigo.imagem }}">
-        <p>{{artigo.legenda}}</p><br>
-      </div>
-      <div class="row">
-        <p>{{ artigo.texto }}</p>
-        <h6>Publicado em {{ artigo.data_publicacao }}</h6>
-        <h4>{{ artigo.redator }}</h4>
-      </div>
-      <button type="button" class="btn btn-primary">{{ artigo.tag }}</button>
+    <div class="principal">
+        <h1>Algo aqui</h1>
+        {% for artigo in artigos %}
+        {{ artigo.imagem }}
+        {{ artigo.nome }}
+        <hr>
+        {% endfor %}
     </div>
-    <br>
-  </main>  
+        
 {% endblock content %}
+
 {% block footer %}
   <br/>
   <footer class="text-white text-center text-lg-start" style="background-color: rgb(30, 34, 56)">
@@ -60,7 +48,7 @@
       <div class="row">
         <!--Grid column-->
         <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Footer Content</h5>
+          <h5 class="text-uppercase">Footer</h5>
   
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis

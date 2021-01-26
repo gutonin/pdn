@@ -13,7 +13,7 @@ class Artigo(models.Model):
     titulo = models.CharField(max_length=100)
     legenda = models.CharField(max_length=200)
     data_publicacao = models.DateTimeField(default=timezone.now, blank=True)
-    imagem = FileBrowseField("Image", max_length=200, directory="static/img/", extensions=[".jpg"], blank=True)
+    imagem = FileBrowseField("Image", max_length=200, directory="static/img/", extensions=[".jpg",".png",], blank=True)
     texto = models.TextField(null=True, blank=True)
     tag = models.ForeignKey(Tag, null=True, blank=True, on_delete=models.CASCADE)
     redator = models.ForeignKey(Redator, null=True, blank=True, on_delete=models.CASCADE)
