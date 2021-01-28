@@ -1,1 +1,1 @@
-web: gunicorn pdn-gustavo.wsgi
+web: gunicorn --python pdn-gustavo/pdn.wsgi
