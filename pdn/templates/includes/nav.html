@@ -1,9 +1,9 @@
 {% load static %}     
     <ul class="nav justify-content-center">
-        {% for z in categorias %}
-            {% if z.slug %}
+        {% for categoria in categorias %}
+            {% if categoria.exibir_categoria == True %}
                 <li class="nav-item">
-                    <a class="nav-link active" href="{% url 'categoria' categoria=z.slug  %}"><h5>{{ z.nome }}</h5></a>
+                    <a class="nav-link active" href="{% url 'categoria' categoria=categoria.slug  %}"><h5>{{ categoria.nome }}</h5></a>
                 </li>
             {% endif %}
         {% endfor %}

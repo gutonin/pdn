@@ -29,12 +29,28 @@
 
 {% block content %}
     <div class="principal">
-        <h1>Algo aqui</h1>
-        {% for artigo in artigos %}
-        {{ artigo.imagem }}
-        {{ artigo.nome }}
-        <hr>
-        {% endfor %}
+        <div class="container">
+          <div class="row">
+              <div class="titulo-pg text-center">{{categoria}}</div>
+          </div>
+          <br>
+          <div class="hr-personalizado"></div>
+          <br>
+          <div class="row">
+            {% for artigo in artigos %}
+              <div class="col-md-6">
+                <a href="/canal/{{ artigo.categoria }}/{{artigo.slug}}">
+                  {% if artigo.imagem %}
+                    <img src="/media/{{ artigo.imagem }}" class="img-fluid">
+                  {% else %}
+                    <img class="img-fluid" src="/media/uploads/download.png">                   
+                  {% endif %}
+                  <h2>{{ artigo.titulo }}</h2>
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
     </div>
         
 {% endblock content %}

@@ -40,10 +40,10 @@
       </div>
       <br>
       <div class="row">
-        <div class="col-9">
+        <div class="col-md-9">
           {% include 'includes/chamadas.html' with i=principal.first teste=True %} 
         </div>
-        <div class="col-3">
+        <div class="col-md-3">
           {% for i in principal %}
             {% if forloop.counter0 < 3 and not forloop.first %}
               <div class="col-12">
@@ -53,7 +53,7 @@
           {% endfor %}
         </div>
       </div>
-      <div class="row text-center">
+      <di v class="row text-center">
         <div class="col-md-12">
           <div class="hr-personalizado"></div> 
           <br>

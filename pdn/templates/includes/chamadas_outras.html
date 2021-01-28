@@ -2,19 +2,15 @@
 <div class="row d-flex">
     
     {% for i in principal %}
-                    
         <div class="col-12 col-lg-6">
             <a href='/canal/{{ i.categoria.slug }}/{{ i.slug }}'>
-                
                 {% if i.imagem %}
                     <img class="img-fluid" src="/media/{{ i.imagem }}">
                 {% else %}
                     <img class="img-fluid" src="/media/uploads/download.png">  
                 {% endif %}
-                    
                 <h1>{{ i.titulo }}</h1>
             </a>
         </div>
-         
     {% endfor %}
 </div>
